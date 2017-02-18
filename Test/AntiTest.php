@@ -1,15 +1,15 @@
 <?php
 
-namespace Tale\Test\Jade;
+namespace Tale\Test\Pug;
 
-use Tale\Jade\Compiler;
-use Tale\Jade\Lexer;
-use Tale\Jade\Parser;
+use Tale\Pug\Compiler;
+use Tale\Pug\Lexer;
+use Tale\Pug\Parser;
 
 class AntiTest extends \PHPUnit_Framework_TestCase
 {
 
-    /** @var \Tale\Jade\Compiler */
+    /** @var \Tale\Pug\Compiler */
     private $compiler;
 
     public function setUp()

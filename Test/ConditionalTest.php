@@ -1,14 +1,14 @@
 <?php
 
-namespace Tale\Test\Jade;
+namespace Tale\Test\Pug;
 
-use Tale\Jade\Compiler;
-use Tale\Jade\Renderer;
+use Tale\Pug\Compiler;
+use Tale\Pug\Renderer;
 
 class ConditionalTest extends \PHPUnit_Framework_TestCase
 {
 
-    /** @var \Tale\Jade\Renderer */
+    /** @var \Tale\Pug\Renderer */
     private $renderer;
 
     public function setUp()
@@ -167,7 +167,7 @@ div
 
 -
     if (\$something && \$somethingElse) {
-        echo "No jade handling here";
+        echo "No pug handling here";
     }
 
     \$array = ["a","b"
@@ -181,7 +181,7 @@ JADE;
 
 
         $this->assertEquals(
-            '<?php if ($something):?><p>Do something</p><?php endif;?><?php if ($something && $somethingElse) {?><p>Do some random stuff</p><?php }?><?php if ($something && $somethingElse) {echo "No jade handling here";}$array = ["a","b""c", "d","e", "f","g","h"];?><p>and it goes on normally...</p>',
+            '<?php if ($something):?><p>Do something</p><?php endif;?><?php if ($something && $somethingElse) {?><p>Do some random stuff</p><?php }?><?php if ($something && $somethingElse) {echo "No pug handling here";}$array = ["a","b""c", "d","e", "f","g","h"];?><p>and it goes on normally...</p>',
             $this->renderer->compile($jade)
         );
     }

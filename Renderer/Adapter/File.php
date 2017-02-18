@@ -1,35 +1,35 @@
 <?php
 /**
- * The Tale Jade File Renderer-Adapter.
+ * The Tale Pug File Renderer-Adapter.
  *
  * This adapter uses a Cache Directory and PHTML-files to render
  * the generated markup.
  *
  * Make sure the Cache Directory is writable!
  *
- * This file is part of the Tale Jade Template Engine for PHP
+ * This file is part of the Tale Pug Template Engine for PHP
  *
  * LICENSE:
  * The code of this file is distributed under the MIT license.
  * If you didn't receive a copy of the license text, you can
- * read it here https://github.com/Talesoft/tale-jade/blob/master/LICENSE.md
+ * read it here https://github.com/Talesoft/tale-pug/blob/master/LICENSE.md
  *
  * @category   Presentation
- * @package    Tale\Jade\Renderer\Adapter
+ * @package    Tale\Pug\Renderer\Adapter
  * @author     Torben Koehn <torben@talesoft.codes>
  * @author     Talesoft <info@talesoft.codes>
  * @copyright  Copyright (c) 2015-2016 Torben Köhn (http://talesoft.codes)
- * @license    https://github.com/Talesoft/tale-jade/blob/master/LICENSE.md MIT License
+ * @license    https://github.com/Talesoft/tale-pug/blob/master/LICENSE.md MIT License
  * @version    1.4.5
  * @link       http://jade.talesoft.codes/docs/files/Renderer.Adapter.File.html
  * @since      File available since Release 1.0
  */
 
-namespace Tale\Jade\Renderer\Adapter;
+namespace Tale\Pug\Renderer\Adapter;
 
 use RuntimeException;
-use Tale\Jade\Renderer;
-use Tale\Jade\Renderer\AdapterBase;
+use Tale\Pug\Renderer;
+use Tale\Pug\Renderer\AdapterBase;
 
 /**
  * Handles rendering with cached files and include.
@@ -54,13 +54,13 @@ use Tale\Jade\Renderer\AdapterBase;
  * - Cache files should be secured, since it's PHP-code!!! (e.g. Deny in .htaccess)
  *
  * @category   Presentation
- * @package    Tale\Jade\Renderer\Adapter
+ * @package    Tale\Pug\Renderer\Adapter
  * @author     Torben Koehn <torben@talesoft.codes>
  * @author     Talesoft <info@talesoft.codes>
  * @copyright  Copyright (c) 2015-2016 Torben Köhn (http://talesoft.codes)
- * @license    https://github.com/Talesoft/tale-jade/blob/master/LICENSE.md MIT License
+ * @license    https://github.com/Talesoft/tale-pug/blob/master/LICENSE.md MIT License
  * @version    1.4.5
- * @link       http://jade.talesoft.codes/docs/classes/Tale.Jade.Renderer.Adapter.File.html
+ * @link       http://jade.talesoft.codes/docs/classes/Tale.Pug.Renderer.Adapter.File.html
  * @since      File available since Release 1.0
  */
 class File extends AdapterBase
@@ -128,7 +128,7 @@ class File extends AdapterBase
      *
      * @return string the rendered markup
      * @throws \Exception when the directory can't be created
-     * @throws \Tale\Jade\Compiler\Exception when the file to render couldn't found
+     * @throws \Tale\Pug\Compiler\Exception when the file to render couldn't found
      */
     public function render($path, array $args = null)
     {

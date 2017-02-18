@@ -1,35 +1,35 @@
 <?php
 /**
- * The Tale Jade Renderer.
+ * The Tale Pug Renderer.
  *
  * Contains the renderer that compiles Jade for you
  * and renders it through different, configurable adapters
  *
- * This file is part of the Tale Jade Template Engine for PHP
+ * This file is part of the Tale Pug Template Engine for PHP
  *
  * LICENSE:
  * The code of this file is distributed under the MIT license.
  * If you didn't receive a copy of the license text, you can
- * read it here https://github.com/Talesoft/tale-jade/blob/master/LICENSE.md
+ * read it here https://github.com/Talesoft/tale-pug/blob/master/LICENSE.md
  *
  * @category   Presentation
- * @package    Tale\Jade
+ * @package    Tale\Pug
  * @author     Torben Koehn <torben@talesoft.codes>
  * @author     Talesoft <info@talesoft.codes>
  * @copyright  Copyright (c) 2015-2016 Torben Köhn (http://talesoft.codes)
- * @license    https://github.com/Talesoft/tale-jade/blob/master/LICENSE.md MIT License
+ * @license    https://github.com/Talesoft/tale-pug/blob/master/LICENSE.md MIT License
  * @version    1.4.5
  * @link       http://jade.talesoft.codes/docs/files/Renderer.html
  * @since      File available since Release 1.0
  */
 
-namespace Tale\Jade;
+namespace Tale\Pug;
 
 use Tale\ConfigurableTrait;
-use Tale\Jade\Renderer\AdapterBase;
+use Tale\Pug\Renderer\AdapterBase;
 
 /**
- * Allows easy rendering of Jade-files to markup.
+ * Allows easy rendering of Pug-files to markup.
  *
  * The renderer provides utilities to quickly render jade files to
  * HTML/XML-output or/and to files
@@ -37,7 +37,7 @@ use Tale\Jade\Renderer\AdapterBase;
  * Usage example:
  * <code>
  *
- *     use Tale\Jade\Renderer;
+ *     use Tale\Pug\Renderer;
  *
  *     $renderer = new Renderer();
  *
@@ -47,13 +47,13 @@ use Tale\Jade\Renderer\AdapterBase;
  * </code>
  *
  * @category   Presentation
- * @package    Tale\Jade
+ * @package    Tale\Pug
  * @author     Torben Koehn <torben@talesoft.codes>
  * @author     Talesoft <info@talesoft.codes>
  * @copyright  Copyright (c) 2015-2016 Torben Köhn (http://talesoft.codes)
- * @license    https://github.com/Talesoft/tale-jade/blob/master/LICENSE.md MIT License
+ * @license    https://github.com/Talesoft/tale-pug/blob/master/LICENSE.md MIT License
  * @version    1.4.5
- * @link       http://jade.talesoft.codes/docs/classes/Tale.Jade.Renderer.html
+ * @link       http://jade.talesoft.codes/docs/classes/Tale.Pug.Renderer.html
  * @since      File available since Release 1.0
  */
 class Renderer
@@ -89,7 +89,7 @@ class Renderer
     private $adapter;
 
     /**
-     * Creates a new Tale Jade Renderer instance to render Jade files.
+     * Creates a new Tale Pug Renderer instance to render Pug files.
      *
      * Use the ->render() method on the resulting object to render
      * your jade files
@@ -259,7 +259,7 @@ class Renderer
 
             if (!is_subclass_of($className, __NAMESPACE__.'\\Renderer\\AdapterBase'))
                 throw new \RuntimeException(
-                    "The passed adapter $className doesn't extend Tale\\Jade\\Renderer\\AdapterBase"
+                    "The passed adapter $className doesn't extend Tale\\Pug\\Renderer\\AdapterBase"
                 );
 
             $this->adapter = new $className($this, $this->options['adapter_options']);
@@ -269,7 +269,7 @@ class Renderer
     }
 
     /**
-     * Compiles a Jade-string to PHTML.
+     * Compiles a Pug-string to PHTML.
      *
      * The result can then be evaluated, the best method is
      * a simple PHP include
@@ -319,8 +319,8 @@ class Renderer
     /**
      * Renders a jade-file to a markup-string directly.
      *
-     * This is the essence of the Jade-renderer and is
-     * the shortest and easiest way to get Jade running
+     * This is the essence of the Pug-renderer and is
+     * the shortest and easiest way to get Pug running
      * in your project
      *
      * Notice that if your file couldn't found, you need to
@@ -330,7 +330,7 @@ class Renderer
      * or from get_include_path(), if no paths have been defined
      *
      * @param string     $file the relative path to the file to render
-     * @param array|null $args an array of variables to pass to the Jade-file
+     * @param array|null $args an array of variables to pass to the Pug-file
      *
      * @return string The renderered markup
      */

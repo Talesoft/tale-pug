@@ -1,15 +1,15 @@
 <?php
 
-namespace Tale\Test\Jade;
+namespace Tale\Test\Pug;
 
-use Tale\Jade\Compiler;
-use Tale\Jade\Renderer;
-use Tale\Jade\Parser;
+use Tale\Pug\Compiler;
+use Tale\Pug\Renderer;
+use Tale\Pug\Parser;
 
 class PrettyTest extends \PHPUnit_Framework_TestCase
 {
 
-    /** @var \Tale\Jade\Renderer */
+    /** @var \Tale\Pug\Renderer */
     private $renderer;
 
     public function setUp()
@@ -29,7 +29,7 @@ class PrettyTest extends \PHPUnit_Framework_TestCase
 
         $phtml = <<<'PHTML'
 <!DOCTYPE html>
-<html<?php $__value = isset($lang) ? $lang : false; if (!\Tale\Jade\Compiler\is_null_or_false($__value)) echo ' lang='.\Tale\Jade\Compiler\build_value($__value, '"', true); unset($__value);?>>
+<html<?php $__value = isset($lang) ? $lang : false; if (!\Tale\Pug\Compiler\is_null_or_false($__value)) echo ' lang='.\Tale\Pug\Compiler\build_value($__value, '"', true); unset($__value);?>>
   <head>
     <title>
       <?=htmlentities(isset($title) ? $title : '', \ENT_QUOTES, 'UTF-8')?>

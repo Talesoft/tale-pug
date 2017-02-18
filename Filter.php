@@ -1,33 +1,33 @@
 <?php
 /**
- * The Tale Jade Default Filters.
+ * The Tale Pug Default Filters.
  *
  * Contains a static filter class that provides some basic
- * filters for use inside Jade-files. You can define own filters
+ * filters for use inside Pug-files. You can define own filters
  * by passing the 'filter'-option to the Compiler you compile
- * your Jade files with
+ * your Pug files with
  *
- * This file is part of the Tale Jade Template Engine for PHP
+ * This file is part of the Tale Pug Template Engine for PHP
  *
  * LICENSE:
  * The code of this file is distributed under the MIT license.
  * If you didn't receive a copy of the license text, you can
- * read it here https://github.com/Talesoft/tale-jade/blob/master/LICENSE.md
+ * read it here https://github.com/Talesoft/tale-pug/blob/master/LICENSE.md
  *
  * @category   Presentation
- * @package    Tale\Jade
+ * @package    Tale\Pug
  * @author     Torben Koehn <torben@talesoft.codes>
  * @author     Talesoft <info@talesoft.codes>
  * @copyright  Copyright (c) 2015-2016 Torben Köhn (http://talesoft.codes)
- * @license    https://github.com/Talesoft/tale-jade/blob/master/LICENSE.md MIT License
+ * @license    https://github.com/Talesoft/tale-pug/blob/master/LICENSE.md MIT License
  * @version    1.4.5
  * @link       http://jade.talesoft.codes/docs/files/Filter.html
  * @since      File available since Release 1.0
  */
 
-namespace Tale\Jade;
+namespace Tale\Pug;
 
-use Tale\Jade\Parser\Node;
+use Tale\Pug\Parser\Node;
 
 /**
  * Provides basic, static filters for the compiler.
@@ -48,13 +48,13 @@ use Tale\Jade\Parser\Node;
  * :sass    => converts to SASS CSS
  *
  * @category   Presentation
- * @package    Tale\Jade
+ * @package    Tale\Pug
  * @author     Torben Koehn <torben@talesoft.codes>
  * @author     Talesoft <info@talesoft.codes>
  * @copyright  Copyright (c) 2015-2016 Torben Köhn (http://talesoft.codes)
- * @license    https://github.com/Talesoft/tale-jade/blob/master/LICENSE.md MIT License
+ * @license    https://github.com/Talesoft/tale-pug/blob/master/LICENSE.md MIT License
  * @version    1.4.5
- * @link       http://jade.talesoft.codes/docs/classes/Tale.Jade.Filter.html
+ * @link       http://jade.talesoft.codes/docs/classes/Tale.Pug.Filter.html
  * @since      File available since Release 1.0
  */
 class Filter

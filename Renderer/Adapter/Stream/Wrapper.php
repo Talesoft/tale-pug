@@ -1,29 +1,29 @@
 <?php
 /**
- * The Tale Jade Stream Renderer-Adapter Stream Wrapper
+ * The Tale Pug Stream Renderer-Adapter Stream Wrapper
  *
  * Contains a Stream Wrapper to parse and read the special Data-URI generated
  * by the Stream-Adapter
  *
- * This file is part of the Tale Jade Template Engine for PHP
+ * This file is part of the Tale Pug Template Engine for PHP
  *
  * LICENSE:
  * The code of this file is distributed under the MIT license.
  * If you didn't receive a copy of the license text, you can
- * read it here https://github.com/Talesoft/tale-jade/blob/master/LICENSE.md
+ * read it here https://github.com/Talesoft/tale-pug/blob/master/LICENSE.md
  *
  * @category   Presentation
- * @package    Tale\Jade\Renderer\Adapter\Stream
+ * @package    Tale\Pug\Renderer\Adapter\Stream
  * @author     Torben Koehn <torben@talesoft.codes>
  * @author     Talesoft <info@talesoft.codes>
  * @copyright  Copyright (c) 2015-2016 Torben Köhn (http://talesoft.codes)
- * @license    https://github.com/Talesoft/tale-jade/blob/master/LICENSE.md MIT License
+ * @license    https://github.com/Talesoft/tale-pug/blob/master/LICENSE.md MIT License
  * @version    1.4.5
  * @link       http://jade.talesoft.codes/docs/files/Renderer.Adapter.Stream.Wrapper.html
  * @since      File available since Release 1.0
  */
 
-namespace Tale\Jade\Renderer\Adapter\Stream;
+namespace Tale\Pug\Renderer\Adapter\Stream;
 
 use RuntimeException;
 
@@ -37,13 +37,13 @@ use RuntimeException;
  * (fopen, fread, fwrite, INCLUDE(!!!!), etc.)
  *
  * @category   Presentation
- * @package    Tale\Jade\Renderer\Adapter\Stream
+ * @package    Tale\Pug\Renderer\Adapter\Stream
  * @author     Torben Koehn <torben@talesoft.codes>
  * @author     Talesoft <info@talesoft.codes>
  * @copyright  Copyright (c) 2015-2016 Torben Köhn (http://talesoft.codes)
- * @license    https://github.com/Talesoft/tale-jade/blob/master/LICENSE.md MIT License
+ * @license    https://github.com/Talesoft/tale-pug/blob/master/LICENSE.md MIT License
  * @version    1.4.5
- * @link       http://jade.talesoft.codes/docs/classes/Tale.Jade.Renderer.Adapter.Stream.Wrapper.html
+ * @link       http://jade.talesoft.codes/docs/classes/Tale.Pug.Renderer.Adapter.Stream.Wrapper.html
  * @since      File available since Release 1.0
  */
 class Wrapper
@@ -73,7 +73,7 @@ class Wrapper
     /**
      * This gets called when a url-stream is opened with the wrapper-scheme.
      *
-     * (e.g. fopen('tale-jade://data;...'), INCLUDE('tale-jade://data;...')
+     * (e.g. fopen('tale-pug://data;...'), INCLUDE('tale-pug://data;...')
      *
      * @param string $uri          the Data-URI this stream was opened with
      * @param string $mode         the stream read/write-mode (useless here)
@@ -91,7 +91,7 @@ class Wrapper
         $strpos = function_exists('mb_strpos') ? 'mb_strpos' : 'strpos';
 
         //Our data URI could look like this:
-        // tale-jade://data;<base64-encoded-phtml>
+        // tale-pug://data;<base64-encoded-phtml>
         //We strip everything behind th first ;, the result would be only
         // <base64-encoded-phtml>
         //We decode that and $_data will contain only the pure, compiled PHTML

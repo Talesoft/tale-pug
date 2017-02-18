@@ -1,15 +1,15 @@
 <?php
 
-namespace Tale\Test\Jade;
+namespace Tale\Test\Pug;
 
-use Tale\Jade\Compiler;
-use Tale\Jade\Renderer;
-use Tale\Jade\Parser;
+use Tale\Pug\Compiler;
+use Tale\Pug\Renderer;
+use Tale\Pug\Parser;
 
 class IssueTest extends \PHPUnit_Framework_TestCase
 {
 
-    /** @var \Tale\Jade\Renderer */
+    /** @var \Tale\Pug\Renderer */
     private $renderer;
 
     public function setUp()

@@ -1,13 +1,13 @@
 <?php
 
-namespace Tale\Test\Jade;
+namespace Tale\Test\Pug;
 
-use Tale\Jade\Renderer;
+use Tale\Pug\Renderer;
 
 class BlockTest extends \PHPUnit_Framework_TestCase
 {
 
-    /** @var \Tale\Jade\Compiler */
+    /** @var \Tale\Pug\Compiler */
     private $renderer;
 
     public function setUp()

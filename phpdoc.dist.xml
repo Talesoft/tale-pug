@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <phpdoc>
-    <title><![CDATA[Tale Jade for PHP]]></title>
+    <title><![CDATA[Tale Pug for PHP]]></title>
     <parser>
         <target>docs/structure</target>
         <extensions>

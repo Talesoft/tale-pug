@@ -1,31 +1,31 @@
 <?php
 /**
- * The Tale Jade Renderer-Adapter Prototype.
+ * The Tale Pug Renderer-Adapter Prototype.
  *
  * All adapters that the renderer can use should extend this class
  * and implement its ->render() method.
  *
- * This file is part of the Tale Jade Template Engine for PHP
+ * This file is part of the Tale Pug Template Engine for PHP
  *
  * LICENSE:
  * The code of this file is distributed under the MIT license.
  * If you didn't receive a copy of the license text, you can
- * read it here https://github.com/Talesoft/tale-jade/blob/master/LICENSE.md
+ * read it here https://github.com/Talesoft/tale-pug/blob/master/LICENSE.md
  *
  * @category   Presentation
- * @package    Tale\Jade\Renderer
+ * @package    Tale\Pug\Renderer
  * @author     Torben Koehn <torben@talesoft.codes>
  * @author     Talesoft <info@talesoft.codes>
  * @copyright  Copyright (c) 2015-2016 Torben Köhn (http://talesoft.codes)
- * @license    https://github.com/Talesoft/tale-jade/blob/master/LICENSE.md MIT License
+ * @license    https://github.com/Talesoft/tale-pug/blob/master/LICENSE.md MIT License
  * @version    1.4.5
  * @link       http://jade.talesoft.codes/docs/files/Renderer.AdapterBase.html
  * @since      File available since Release 1.0
  */
 
-namespace Tale\Jade\Renderer;
+namespace Tale\Pug\Renderer;
 
-use Tale\Jade\Renderer;
+use Tale\Pug\Renderer;
 use Tale\ConfigurableTrait;
 
 /**
@@ -36,13 +36,13 @@ use Tale\ConfigurableTrait;
  * does the rendering.
  *
  * @category   Presentation
- * @package    Tale\Jade\Renderer
+ * @package    Tale\Pug\Renderer
  * @author     Torben Koehn <torben@talesoft.codes>
  * @author     Talesoft <info@talesoft.codes>
  * @copyright  Copyright (c) 2015-2016 Torben Köhn (http://talesoft.codes)
- * @license    https://github.com/Talesoft/tale-jade/blob/master/LICENSE.md MIT License
+ * @license    https://github.com/Talesoft/tale-pug/blob/master/LICENSE.md MIT License
  * @version    1.4.5
- * @link       http://jade.talesoft.codes/docs/classes/Tale.Jade.Renderer.AdapterBase.html
+ * @link       http://jade.talesoft.codes/docs/classes/Tale.Pug.Renderer.AdapterBase.html
  * @since      File available since Release 1.0
  */
 abstract class AdapterBase

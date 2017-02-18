@@ -1,14 +1,14 @@
 <?php
 
-namespace Tale\Test\Jade;
+namespace Tale\Test\Pug;
 
-use Tale\Jade\Compiler;
-use Tale\Jade\Renderer;
+use Tale\Pug\Compiler;
+use Tale\Pug\Renderer;
 
 class LoopTest extends \PHPUnit_Framework_TestCase
 {
 
-    /** @var \Tale\Jade\Renderer */
+    /** @var \Tale\Pug\Renderer */
     private $renderer;
 
     public function setUp()

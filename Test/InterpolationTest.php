@@ -1,14 +1,14 @@
 <?php
 
-namespace Tale\Test\Jade;
+namespace Tale\Test\Pug;
 
-use Tale\Jade\Compiler;
-use Tale\Jade\Renderer;
+use Tale\Pug\Compiler;
+use Tale\Pug\Renderer;
 
 class InterpolationTest extends \PHPUnit_Framework_TestCase
 {
 
-    /** @var \Tale\Jade\Renderer */
+    /** @var \Tale\Pug\Renderer */
     private $renderer;
 
     public function setUp()
@@ -54,7 +54,7 @@ class InterpolationTest extends \PHPUnit_Framework_TestCase
         ];
     }
 
-    public function testJadeInterpolation()
+    public function testPugInterpolation()
     {
 
         $this->assertEquals('<p>Some Text <a>Some link</a></p>', $this->renderer->compile('p Some Text #[a Some link]'));
@@ -83,7 +83,7 @@ class InterpolationTest extends \PHPUnit_Framework_TestCase
         $this->renderer->compile('#{p Some content');
     }
 
-    public function testInvalidJadeInterpolation()
+    public function testInvalidPugInterpolation()
     {
 
         $this->setExpectedException(Compiler\Exception::class);

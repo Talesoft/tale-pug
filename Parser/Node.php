@@ -1,31 +1,31 @@
 <?php
 /**
- * The Tale Jade Parser Node.
+ * The Tale Pug Parser Node.
  *
  * Contains a Node-class that keeps parent-child relations and builds
  * a tree this way.
  *
  * It's used to build the Abstract Syntax Tree (AST) in the Parser
  *
- * This file is part of the Tale Jade Template Engine for PHP
+ * This file is part of the Tale Pug Template Engine for PHP
  *
  * LICENSE:
  * The code of this file is distributed under the MIT license.
  * If you didn't receive a copy of the license text, you can
- * read it here https://github.com/Talesoft/tale-jade/blob/master/LICENSE.md
+ * read it here https://github.com/Talesoft/tale-pug/blob/master/LICENSE.md
  *
  * @category   Presentation
- * @package    Tale\Jade\Parser
+ * @package    Tale\Pug\Parser
  * @author     Torben Koehn <torben@talesoft.codes>
  * @author     Talesoft <info@talesoft.codes>
  * @copyright  Copyright (c) 2015-2016 Torben Köhn (http://talesoft.codes)
- * @license    https://github.com/Talesoft/tale-jade/blob/master/LICENSE.md MIT License
+ * @license    https://github.com/Talesoft/tale-pug/blob/master/LICENSE.md MIT License
  * @version    1.4.5
  * @link       http://jade.talesoft.codes/docs/files/Parser.Node.html
  * @since      File available since Release 1.0
  */
 
-namespace Tale\Jade\Parser;
+namespace Tale\Pug\Parser;
 
 /**
  * Represents a node in the AST the parser generates.
@@ -35,13 +35,13 @@ namespace Tale\Jade\Parser;
  * It also has some utility methods to work with those nodes
  *
  * @category   Presentation
- * @package    Tale\Jade\Parser
+ * @package    Tale\Pug\Parser
  * @author     Torben Koehn <torben@talesoft.codes>
  * @author     Talesoft <info@talesoft.codes>
  * @copyright  Copyright (c) 2015-2016 Torben Köhn (http://talesoft.codes)
- * @license    https://github.com/Talesoft/tale-jade/blob/master/LICENSE.md MIT License
+ * @license    https://github.com/Talesoft/tale-pug/blob/master/LICENSE.md MIT License
  * @version    1.4.5
- * @link       http://jade.talesoft.codes/docs/classes/Tale.Jade.Parser.Node.html
+ * @link       http://jade.talesoft.codes/docs/classes/Tale.Pug.Parser.Node.html
  * @since      File available since Release 1.0
  */
 class Node

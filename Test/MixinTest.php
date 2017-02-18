@@ -1,14 +1,14 @@
 <?php
 
-namespace Tale\Test\Jade;
+namespace Tale\Test\Pug;
 
-use Tale\Jade\Compiler\Exception;
-use Tale\Jade\Renderer;
+use Tale\Pug\Compiler\Exception;
+use Tale\Pug\Renderer;
 
 class MixinTest extends \PHPUnit_Framework_TestCase
 {
 
-    /** @var \Tale\Jade\Renderer */
+    /** @var \Tale\Pug\Renderer */
     private $renderer;
 
     public function setUp()

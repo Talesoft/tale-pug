@@ -1,6 +1,6 @@
 <?php
 /**
- * The Tale Jade Compiler.
+ * The Tale Pug Compiler.
  *
  * Contains a compiler that takes an Abstract Syntax Tree (AST) from
  * the parser and generates Markup out of it.
@@ -8,29 +8,29 @@
  * The Compiler can handle different markup-types.
  * Currently XML and HTML5 are supported.
  *
- * This file is part of the Tale Jade Template Engine for PHP
+ * This file is part of the Tale Pug Template Engine for PHP
  *
  * LICENSE:
  * The code of this file is distributed under the MIT license.
  * If you didn't receive a copy of the license text, you can
- * read it here https://github.com/Talesoft/tale-jade/blob/master/LICENSE.md
+ * read it here https://github.com/Talesoft/tale-pug/blob/master/LICENSE.md
  *
  * @category   Presentation
- * @package    Tale\Jade
+ * @package    Tale\Pug
  * @author     Torben Koehn <torben@talesoft.codes>
  * @author     Talesoft <info@talesoft.codes>
  * @copyright  Copyright (c) 2015-2016 Torben Köhn (http://talesoft.codes)
- * @license    https://github.com/Talesoft/tale-jade/blob/master/LICENSE.md MIT License
+ * @license    https://github.com/Talesoft/tale-pug/blob/master/LICENSE.md MIT License
  * @version    1.4.5
  * @link       http://jade.talesoft.codes/docs/files/Compiler.html
  * @since      File available since Release 1.0
  */
 
-namespace Tale\Jade;
+namespace Tale\Pug;
 
 use Tale\ConfigurableTrait;
-use Tale\Jade\Compiler\Exception;
-use Tale\Jade\Parser\Node;
+use Tale\Pug\Compiler\Exception;
+use Tale\Pug\Parser\Node;
 
 /**
  * Compiles an AST got from the parser to valid P/X/HTML or P/XML
@@ -48,7 +48,7 @@ use Tale\Jade\Parser\Node;
  * Usage example:
  * <code>
  *
- *     use Tale\Jade\Compiler;
+ *     use Tale\Pug\Compiler;
  *
  *     $compiler = new Compiler();
  *
@@ -87,13 +87,13 @@ use Tale\Jade\Parser\Node;
  * AJAX response.
  *
  * @category   Presentation
- * @package    Tale\Jade
+ * @package    Tale\Pug
  * @author     Torben Koehn <torben@talesoft.codes>
  * @author     Talesoft <info@talesoft.codes>
  * @copyright  Copyright (c) 2015-2016 Torben Köhn (http://talesoft.codes)
- * @license    https://github.com/Talesoft/tale-jade/blob/master/LICENSE.md MIT License
+ * @license    https://github.com/Talesoft/tale-pug/blob/master/LICENSE.md MIT License
  * @version    1.4.5
- * @link       http://jade.talesoft.codes/docs/classes/Tale.Jade.Compiler.html
+ * @link       http://jade.talesoft.codes/docs/classes/Tale.Pug.Compiler.html
  * @since      File available since Release 1.0
  */
 class Compiler
@@ -261,7 +261,7 @@ class Compiler
      *                              This fixes problems with PHP's short open tags
      * paths:                       The paths to resolve paths in.
      *                              If none set, it will default to get_include_path()
-     * extensions:                  The extensions for Jade files
+     * extensions:                  The extensions for Pug files
      *                              (default: .jade and .jd)
      * parser_options:              The options for the parser if none given
      * lexer_options:               The options for the lexer if none given.
@@ -304,25 +304,26 @@ class Compiler
             'mode'                    => self::MODE_HTML,
             'xhtml_modes' => ['default', 'transitional', 'strict', 'frameset', '1.1', 'basic', 'mobile'],
             'filters'                 => [
-                'plain' => 'Tale\\Jade\\Filter::filterPlain',
-                'css'   => 'Tale\\Jade\\Filter::filterStyle',
-                'style' => 'Tale\\Jade\\Filter::filterStyle',
-                'js'    => 'Tale\\Jade\\Filter::filterScript',
-                'script' => 'Tale\\Jade\\Filter::filterScript',
-                'php'   => 'Tale\\Jade\\Filter::filterCode',
-                'code' => 'Tale\\Jade\\Filter::filterCode',
-                'markdown' => 'Tale\\Jade\\Filter::filterMarkdown',
-                'md' => 'Tale\\Jade\\Filter::filterMarkdown',
-                'coffeescript' => 'Tale\\Jade\\Filter::filterCoffeeScript',
-                'coffee' => 'Tale\\Jade\\Filter::filterCoffeeScript',
-                'less' => 'Tale\\Jade\\Filter::filterLess',
-                'stylus' => 'Tale\\Jade\\Filter::filterStylus',
-                'styl' => 'Tale\\Jade\\Filter::filterStylus',
-                'sass' => 'Tale\\Jade\\Filter::filterSass'
+                'plain' => 'Tale\\Pug\\Filter::filterPlain',
+                'css'   => 'Tale\\Pug\\Filter::filterStyle',
+                'style' => 'Tale\\Pug\\Filter::filterStyle',
+                'js'    => 'Tale\\Pug\\Filter::filterScript',
+                'script' => 'Tale\\Pug\\Filter::filterScript',
+                'php'   => 'Tale\\Pug\\Filter::filterCode',
+                'code' => 'Tale\\Pug\\Filter::filterCode',
+                'markdown' => 'Tale\\Pug\\Filter::filterMarkdown',
+                'md' => 'Tale\\Pug\\Filter::filterMarkdown',
+                'coffeescript' => 'Tale\\Pug\\Filter::filterCoffeeScript',
+                'coffee' => 'Tale\\Pug\\Filter::filterCoffeeScript',
+                'less' => 'Tale\\Pug\\Filter::filterLess',
+                'stylus' => 'Tale\\Pug\\Filter::filterStylus',
+                'styl' => 'Tale\\Pug\\Filter::filterStylus',
+                'sass' => 'Tale\\Pug\\Filter::filterSass'
                 //TODO: What else?
             ],
             'filter_map'               => [
                 'jade' => 'plain',
+                'pug' => 'plain',
                 'css'  => 'css',
                 'js'   => 'js',
                 'php'  => 'php',
@@ -347,7 +348,7 @@ class Compiler
             'replace_mixins'           => false,
             'echo_xml_doctype'          => defined('HHVM_VERSION'),
             'paths'                   => [],
-            'extensions'              => ['.jd', '.jade'],
+            'extensions'              => ['.pug', '.jd', '.jade'],
             'parser_options'           => [],
             'lexer_options'            => []
         ], $options);
@@ -402,7 +403,7 @@ class Compiler
      * :<filtername> directive
      *
      * The callback should have the following signature:
-     * (\Tale\Jade\Parser\Node $node, $indent, $newLine)
+     * (\Tale\Pug\Parser\Node $node, $indent, $newLine)
      * where $node is the filter-Node found,
      * $indent is the current indentation respecting level and pretty-option
      * and newLine is a new-line respecting the pretty-option
@@ -428,7 +429,7 @@ class Compiler
     }
 
     /**
-     * Compiles a Jade-string to PHTML.
+     * Compiles a Pug-string to PHTML.
      *
      * The result can then be evaluated, the best method is
      * a simple PHP include
@@ -478,7 +479,7 @@ class Compiler
         $this->handleBlocks($node);
         $this->handleMixins($node);
 
-        //The actual compilation process ($node is the very root \Tale\Jade\Parser\Node of everything)
+        //The actual compilation process ($node is the very root \Tale\Pug\Parser\Node of everything)
         $phtml = $this->compileNode($node);
 
 
@@ -683,7 +684,7 @@ class Compiler
      * Interpolation is initialized with # (escaped) or ! (not escaped)
      *
      * After that use either {} brackets for variables expressions
-     * or [] for Jade-expressions
+     * or [] for Pug-expressions
      *
      * e.g.
      *
@@ -915,7 +916,7 @@ class Compiler
         if (!method_exists($this, $method))
             $this->throwException(
                 "No handler $method found for $node->type found. It seems you have customized nodes. You need to ".
-                "extend the Tale Jade Compiler and add own $method-method for the respective node type.",
+                "extend the Tale Pug Compiler and add own $method-method for the respective node type.",
                 $node
             );
 
@@ -1060,7 +1061,7 @@ class Compiler
 
             if (!$this->options['allow_imports'])
                 $this->throwException(
-                    'Imports are disabled in this Jade compiler instance through the [`allow_imports`] option. '.
+                    'Imports are disabled in this Pug compiler instance through the [`allow_imports`] option. '.
                     'Set it to [`false`] (default) to enable imports again',
                     $node
                 );
@@ -1121,7 +1122,7 @@ class Compiler
                 }
 
                 //Notice that include might have an expansion before
-                //We'd need to resolve that before we remove the import \Tale\Jade\Parser\Node alltogether
+                //We'd need to resolve that before we remove the import \Tale\Pug\Parser\Node alltogether
                 if (isset($node->expands)) {
 
                     $newNode->expands = $node->expands;
@@ -1151,7 +1152,7 @@ class Compiler
         array_pop($this->files);
 
         //Notice that include might have an expansion before
-        //We'd need to resolve that before we remove the import \Tale\Jade\Parser\Node alltogether
+        //We'd need to resolve that before we remove the import \Tale\Pug\Parser\Node alltogether
         if (isset($node->expands)) {
 
             $importedNode->expands = $node->expands;
@@ -1298,7 +1299,7 @@ class Compiler
      * The actual mixins get compiled in compileMixins
      *
      * @see Compiler->_mixins
-     * @see Tale\Jade\Compiler->compileMixins
+     * @see Tale\Pug\Compiler->compileMixins
      *
      * @param Node $node the mixin node to compile
      *
@@ -1500,7 +1501,7 @@ class Compiler
         }
 
         $phtml .= (count($node->children) > 0 ? $this->indent() : '').$this->createCode(
-                '$__scope = \\Tale\\Jade\\Compiler\\create_scope(get_defined_vars()); '. 
+                '$__scope = \\Tale\\Pug\\Compiler\\create_scope(get_defined_vars()); '.
                 '$__mixinCallArgs = '.$this->exportArray($args).';'.(
                     $hasBlock ? '$__mixinCallArgs[\'__block\'] = isset($__block) ? $__block : null; ' : ''
                 ).'call_user_func($__mixins[\''.$name.'\'], $__mixinCallArgs, $__scope); '.
@@ -1530,7 +1531,7 @@ class Compiler
 
         if (!$name)
             return $this->createCode(
-                '$__scope = \\Tale\\Jade\\Compiler\\create_scope(get_defined_vars()); '.
+                '$__scope = \\Tale\\Pug\\Compiler\\create_scope(get_defined_vars()); '.
                 'echo isset($__block) && $__block instanceof \Closure ? $__block($__scope) : \'\'; '.
                 'unset($__scope);'
             );
@@ -2074,22 +2075,22 @@ class Compiler
                 }
 
                 $quot = $this->options['quote_style'];
-                $builder = '\\Tale\\Jade\\Compiler\\build_value';
+                $builder = '\\Tale\\Pug\\Compiler\\build_value';
 
                 //Handle specific attribute styles for HTML
                 if ($anyHtmlMode) {
 
                     switch ($name) {
                         case 'class':
-                            $builder = '\\Tale\\Jade\\Compiler\\build_class_value';
+                            $builder = '\\Tale\\Pug\\Compiler\\build_class_value';
                             break;
                         case 'style':
-                            $builder = '\\Tale\\Jade\\Compiler\\build_style_value';
+                            $builder = '\\Tale\\Pug\\Compiler\\build_style_value';
                             break;
                     }
 
                     if (strncmp($name, 'data-', 5) === 0)
-                        $builder = '\\Tale\\Jade\\Compiler\\build_data_value';
+                        $builder = '\\Tale\\Pug\\Compiler\\build_data_value';
                 }
 
                 $escaped = $escaped ? 'true' : 'false';
@@ -2126,7 +2127,7 @@ class Compiler
 
                         $pair = $this->createCode(
                             '$__value = '.$values[0].'; '
-                            .'if (!\\Tale\\Jade\\Compiler\\is_null_or_false($__value)) '
+                            .'if (!\\Tale\\Pug\\Compiler\\is_null_or_false($__value)) '
                             ."echo ' $name='.$builder(\$__value, '$quot', $escaped); "
                             .'unset($__value);'
                         );
@@ -2134,7 +2135,7 @@ class Compiler
 
                         $pair = $this->createCode(
                             '$__values = ['.implode(', ', $values).']; '
-                            .'if (!\\Tale\\Jade\\Compiler\\is_array_null_or_false($__values)) '
+                            .'if (!\\Tale\\Pug\\Compiler\\is_array_null_or_false($__values)) '
                             ."echo ' $name='.$builder(\$__values, '$quot', $escaped); "
                             .'unset($__values);'
                         );
@@ -2350,7 +2351,7 @@ class Compiler
             $message .= "\nError occured in: [".end($this->files).']';
 
         throw new Exception(
-            "Failed to compile Jade: $message"
+            "Failed to compile Pug: $message"
         );
     }
 }

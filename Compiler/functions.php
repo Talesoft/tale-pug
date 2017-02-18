@@ -1,6 +1,6 @@
 <?php
 
-namespace Tale\Jade\Compiler {
+namespace Tale\Pug\Compiler {
     //We use the bracket-style here to be able to compile
     //this file into compiled jade templates for valid PHP
 

@@ -1,33 +1,33 @@
 <?php
 /**
- * The Tale Jade Lexer.
+ * The Tale Pug Lexer.
  *
  * Contains the a lexer that analyzes the input-jade and generates
  * tokens out of it via a PHP Generator
  *
- * This file is part of the Tale Jade Template Engine for PHP
+ * This file is part of the Tale Pug Template Engine for PHP
  *
  * LICENSE:
  * The code of this file is distributed under the MIT license.
  * If you didn't receive a copy of the license text, you can
- * read it here https://github.com/Talesoft/tale-jade/blob/master/LICENSE.md
+ * read it here https://github.com/Talesoft/tale-pug/blob/master/LICENSE.md
  *
  * @category   Presentation
- * @package    Tale\Jade
+ * @package    Tale\Pug
  * @author     Torben Koehn <torben@talesoft.codes>
  * @author     Talesoft <info@talesoft.codes>
  * @copyright  Copyright (c) 2015-2016 Torben Köhn (http://talesoft.codes)
- * @license    https://github.com/Talesoft/tale-jade/blob/master/LICENSE.md MIT License
+ * @license    https://github.com/Talesoft/tale-pug/blob/master/LICENSE.md MIT License
  * @version    1.4.5
  * @link       http://jade.talesoft.codes/docs/files/Lexer.html
  * @since      File available since Release 1.0
  */
 
-namespace Tale\Jade;
+namespace Tale\Pug;
 
 use RuntimeException;
 use Tale\ConfigurableTrait;
-use Tale\Jade\Lexer\Exception;
+use Tale\Pug\Lexer\Exception;
 
 /**
  * Performs lexical analysis and provides a token generator.
@@ -45,7 +45,7 @@ use Tale\Jade\Lexer\Exception;
  * Usage example:
  * <code>
  *
- *     use Tale\Jade\Lexer;
+ *     use Tale\Pug\Lexer;
  *
  *     $lexer = new Lexer();
  *
@@ -57,13 +57,13 @@ use Tale\Jade\Lexer\Exception;
  * </code>
  *
  * @category   Presentation
- * @package    Tale\Jade
+ * @package    Tale\Pug
  * @author     Torben Koehn <torben@talesoft.codes>
  * @author     Talesoft <info@talesoft.codes>
  * @copyright  Copyright (c) 2015-2016 Torben Köhn (http://talesoft.codes)
- * @license    https://github.com/Talesoft/tale-jade/blob/master/LICENSE.md MIT License
+ * @license    https://github.com/Talesoft/tale-pug/blob/master/LICENSE.md MIT License
  * @version    1.4.5
- * @link       http://jade.talesoft.codes/docs/classes/Tale.Jade.Lexer.html
+ * @link       http://jade.talesoft.codes/docs/classes/Tale.Pug.Lexer.html
  * @since      File available since Release 1.0
  */
 class Lexer
@@ -351,7 +351,7 @@ class Lexer
      * ]
      * </samp>
      *
-     * @param string $input the Jade-string to lex into tokens
+     * @param string $input the Pug-string to lex into tokens
      *
      * @return \Generator a generator that can be iterated sequentially
      */
@@ -836,7 +836,7 @@ class Lexer
      * as the indentation style for this document.
      *
      * You can indent with everything between 1 space and a few million tabs
-     * other than most Jade implementations
+     * other than most Pug implementations
      *
      * @return \Generator|void
      * @throws Exception
@@ -1223,7 +1223,7 @@ class Lexer
      * @param string|null $nameAttribute The attribute the name gets saved into, if wanted
      *
      * @return \Generator
-     * @throws \Tale\Jade\Lexer\Exception
+     * @throws \Tale\Pug\Lexer\Exception
      */
     protected function scanControlStatement($type, array $names, $nameAttribute = null)
     {
@@ -1840,7 +1840,7 @@ class Lexer
     {
 
         $near = $this->isAtEnd() ? 'END' : $this->peek(10);
-        $message = "Failed to lex jade: $message (Line: {$this->line}, Offset: {$this->offset}, Near: `$near`)";
+        $message = "Failed to lex Pug: $message (Line: {$this->line}, Offset: {$this->offset}, Near: `$near`)";
         throw new Exception($message);
     }
 

@@ -1,32 +1,32 @@
 <?php
 /**
- * The Tale Jade Helper Functions.
+ * The Tale Pug Helper Functions.
  *
  * Contains a bunch of helper-functions that ease up
  * development in a procedural or party-procedural environment
  *
- * This file is part of the Tale Jade Template Engine for PHP
+ * This file is part of the Tale Pug Template Engine for PHP
  *
  * LICENSE:
  * The code of this file is distributed under the MIT license.
  * If you didn't receive a copy of the license text, you can
- * read it here https://github.com/Talesoft/tale-jade/blob/master/LICENSE.md
+ * read it here https://github.com/Talesoft/tale-pug/blob/master/LICENSE.md
  *
  * @category   Presentation
- * @package    Tale\Jade
+ * @package    Tale\Pug
  * @author     Torben Koehn <torben@talesoft.codes>
  * @author     Talesoft <info@talesoft.codes>
  * @copyright  Copyright (c) 2015-2016 Torben Köhn (http://talesoft.codes)
- * @license    https://github.com/Talesoft/tale-jade/blob/master/LICENSE.md MIT License
+ * @license    https://github.com/Talesoft/tale-pug/blob/master/LICENSE.md MIT License
  * @version    1.4.5
  * @link       http://jade.talesoft.codes/docs/files/functions.html
  * @since      File available since Tag 1.0.1
  */
 
-namespace Tale\Jade;
+namespace Tale\Pug;
 
 /**
- * Creates a new Tale Jade Renderer instance to render Jade files.
+ * Creates a new Tale Pug Renderer instance to render Pug files.
  *
  * Use the ->render() method on the resulting object to render
  * your jade files

@@ -1,33 +1,33 @@
 <?php
 /**
- * The Tale Jade Parser.
+ * The Tale Pug Parser.
  *
  * Contains the parser that takes tokens from the lexer
  * and converts it to an Abstract Syntax Tree (AST)
  *
- * This file is part of the Tale Jade Template Engine for PHP
+ * This file is part of the Tale Pug Template Engine for PHP
  *
  * LICENSE:
  * The code of this file is distributed under the MIT license.
  * If you didn't receive a copy of the license text, you can
- * read it here https://github.com/Talesoft/tale-jade/blob/master/LICENSE.md
+ * read it here https://github.com/Talesoft/tale-pug/blob/master/LICENSE.md
  *
  * @category   Presentation
- * @package    Tale\Jade
+ * @package    Tale\Pug
  * @author     Torben Koehn <torben@talesoft.codes>
  * @author     Talesoft <info@talesoft.codes>
  * @copyright  Copyright (c) 2015-2016 Torben Köhn (http://talesoft.codes)
- * @license    https://github.com/Talesoft/tale-jade/blob/master/LICENSE.md MIT License
+ * @license    https://github.com/Talesoft/tale-pug/blob/master/LICENSE.md MIT License
  * @version    1.4.5
  * @link       http://jade.talesoft.codes/docs/files/Parser.html
  * @since      File available since Release 1.0
  */
 
-namespace Tale\Jade;
+namespace Tale\Pug;
 
 use Tale\ConfigurableTrait;
-use Tale\Jade\Parser\Node;
-use Tale\Jade\Parser\Exception;
+use Tale\Pug\Parser\Node;
+use Tale\Pug\Parser\Exception;
 
 /**
  * Takes tokens from the Lexer and creates an AST out of it.
@@ -43,7 +43,7 @@ use Tale\Jade\Parser\Exception;
  * Usage example:
  * <code>
  *
- *     use Tale\Jade\Parser;
+ *     use Tale\Pug\Parser;
  *
  *     $parser = new Parser();
  *
@@ -53,13 +53,13 @@ use Tale\Jade\Parser\Exception;
  * </code>
  *
  * @category   Presentation
- * @package    Tale\Jade
+ * @package    Tale\Pug
  * @author     Torben Koehn <torben@talesoft.codes>
  * @author     Talesoft <info@talesoft.codes>
  * @copyright  Copyright (c) 2015-2016 Torben Köhn (http://talesoft.codes)
- * @license    https://github.com/Talesoft/tale-jade/blob/master/LICENSE.md MIT License
+ * @license    https://github.com/Talesoft/tale-pug/blob/master/LICENSE.md MIT License
  * @version    1.4.5
- * @link       http://jade.talesoft.codes/docs/classes/Tale.Jade.Parser.html
+ * @link       http://jade.talesoft.codes/docs/classes/Tale.Pug.Parser.html
  * @since      File available since Release 1.0
  */
 class Parser
@@ -159,7 +159,7 @@ class Parser
      * The parser will run the provided input through the lexer
      * and generate an AST out of it.
      *
-     * The AST will be an object-tree consisting of \Tale\Jade\Parser\Node instances
+     * The AST will be an object-tree consisting of \Tale\Pug\Parser\Node instances
      *
      * You can take the AST and either compile it with the Compiler or handle it yourself
      *
@@ -192,7 +192,7 @@ class Parser
     /**
      * Parses the provided input-string to an AST.
      *
-     * The Abstract Syntax Tree (AST) will be an object-tree consisting of \Tale\Jade\Parser\Node instances.
+     * The Abstract Syntax Tree (AST) will be an object-tree consisting of \Tale\Pug\Parser\Node instances.
      *
      * You can either let the compiler compile it or compile it yourself
      *
@@ -1199,7 +1199,7 @@ class Parser
                 .':'.$relatedToken['offset'].')';
 
         throw new Exception(
-            "Failed to parse Jade: $message"
+            "Failed to parse Pug: $message"
         );
     }
 }

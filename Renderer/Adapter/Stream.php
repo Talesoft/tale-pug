@@ -1,35 +1,35 @@
 <?php
 /**
- * The Tale Jade Stream Renderer-Adapter.
+ * The Tale Pug Stream Renderer-Adapter.
  *
  * This adapter uses PHP Stream Wrappers to realize a clutter-less,
  * RAM-based rendering approach.
  *
  * Notice that the php.ini-setting `allow_url_fopen` should be `On`
  *
- * This file is part of the Tale Jade Template Engine for PHP
+ * This file is part of the Tale Pug Template Engine for PHP
  *
  * LICENSE:
  * The code of this file is distributed under the MIT license.
  * If you didn't receive a copy of the license text, you can
- * read it here https://github.com/Talesoft/tale-jade/blob/master/LICENSE.md
+ * read it here https://github.com/Talesoft/tale-pug/blob/master/LICENSE.md
  *
  * @category   Presentation
- * @package    Tale\Jade\Renderer\Adapter
+ * @package    Tale\Pug\Renderer\Adapter
  * @author     Torben Koehn <torben@talesoft.codes>
  * @author     Talesoft <info@talesoft.codes>
  * @copyright  Copyright (c) 2015-2016 Torben Köhn (http://talesoft.codes)
- * @license    https://github.com/Talesoft/tale-jade/blob/master/LICENSE.md MIT License
+ * @license    https://github.com/Talesoft/tale-pug/blob/master/LICENSE.md MIT License
  * @version    1.4.5
  * @link       http://jade.talesoft.codes/docs/files/Renderer.Adapter.Stream.html
  * @since      File available since Release 1.0
  */
 
-namespace Tale\Jade\Renderer\Adapter;
+namespace Tale\Pug\Renderer\Adapter;
 
-use Tale\Jade\Renderer;
-use Tale\Jade\Renderer\Adapter\Stream\Wrapper;
-use Tale\Jade\Renderer\AdapterBase;
+use Tale\Pug\Renderer;
+use Tale\Pug\Renderer\Adapter\Stream\Wrapper;
+use Tale\Pug\Renderer\AdapterBase;
 
 /**
  * Handles rendering via Data-URIs and a PHP Stream Wrapper.
@@ -65,13 +65,13 @@ use Tale\Jade\Renderer\AdapterBase;
  * - May or may not be easier to cache (depending on the cache system)
  *
  * @category   Presentation
- * @package    Tale\Jade\Renderer\Adapter
+ * @package    Tale\Pug\Renderer\Adapter
  * @author     Torben Koehn <torben@talesoft.codes>
  * @author     Talesoft <info@talesoft.codes>
  * @copyright  Copyright (c) 2015-2016 Torben Köhn (http://talesoft.codes)
- * @license    https://github.com/Talesoft/tale-jade/blob/master/LICENSE.md MIT License
+ * @license    https://github.com/Talesoft/tale-pug/blob/master/LICENSE.md MIT License
  * @version    1.4.5
- * @link       http://jade.talesoft.codes/docs/classes/Tale.Jade.Renderer.Adapter.Stream.html
+ * @link       http://jade.talesoft.codes/docs/classes/Tale.Pug.Renderer.Adapter.Stream.html
  * @since      File available since Release 1.0
  */
 class Stream extends AdapterBase
@@ -85,7 +85,7 @@ class Stream extends AdapterBase
      *
      * If the stream wrapper with the given name is not registered yet,
      * it is registered
-     * The stream wrapper used is \Tale\Jade\Renderer\Adapter\Stream\Wrapper
+     * The stream wrapper used is \Tale\Pug\Renderer\Adapter\Stream\Wrapper
      *
      * @param Renderer   $renderer the renderer instance this adapter was created in
      * @param array|null $options  an array of options for the adapter
@@ -95,7 +95,7 @@ class Stream extends AdapterBase
 
         parent::__construct($renderer, $options);
 
-        $this->setDefaults(['scheme' => 'jade-phtml']);
+        $this->setDefaults(['scheme' => 'pug-phtml']);
 
         if (!Wrapper::isRegistered($this->getOption('scheme')))
             Wrapper::register($this->getOption('scheme'));

@@ -1,13 +1,13 @@
 <?php
 
-namespace Tale\Test\Jade;
+namespace Tale\Test\Pug;
 
-use Tale\Jade\Compiler;
+use Tale\Pug\Compiler;
 
 class ClassTest extends \PHPUnit_Framework_TestCase
 {
 
-    /** @var \Tale\Jade\Compiler */
+    /** @var \Tale\Pug\Compiler */
     private $compiler;
 
     public function setUp()

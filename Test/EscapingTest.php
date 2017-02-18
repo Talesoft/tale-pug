@@ -1,14 +1,14 @@
 <?php
 
-namespace Tale\Test\Jade;
+namespace Tale\Test\Pug;
 
-use Tale\Jade\Compiler;
-use Tale\Jade\Renderer;
+use Tale\Pug\Compiler;
+use Tale\Pug\Renderer;
 
 class EscapingTest extends \PHPUnit_Framework_TestCase
 {
 
-    /** @var \Tale\Jade\Renderer */
+    /** @var \Tale\Pug\Renderer */
     private $renderer;
 
     public function setUp()
@@ -100,25 +100,25 @@ class EscapingTest extends \PHPUnit_Framework_TestCase
     public function testEscapedAttributeCompilation()
     {
 
-        $this->assertEquals('<a<?php $__value = isset($url) ? $url : false; if (!\Tale\Jade\Compiler\is_null_or_false($__value)) echo \' href=\'.\Tale\Jade\Compiler\build_value($__value, \'"\', true); unset($__value);?>></a>', $this->renderer->compile('a(href=$url)'));
+        $this->assertEquals('<a<?php $__value = isset($url) ? $url : false; if (!\Tale\Pug\Compiler\is_null_or_false($__value)) echo \' href=\'.\Tale\Pug\Compiler\build_value($__value, \'"\', true); unset($__value);?>></a>', $this->renderer->compile('a(href=$url)'));
     }
 
     public function testUnescapedAttributeCompilation()
     {
 
-        $this->assertEquals('<a<?php $__value = isset($url) ? $url : false; if (!\Tale\Jade\Compiler\is_null_or_false($__value)) echo \' href=\'.\Tale\Jade\Compiler\build_value($__value, \'"\', false); unset($__value);?>></a>', $this->renderer->compile('a(href!=$url)'));
+        $this->assertEquals('<a<?php $__value = isset($url) ? $url : false; if (!\Tale\Pug\Compiler\is_null_or_false($__value)) echo \' href=\'.\Tale\Pug\Compiler\build_value($__value, \'"\', false); unset($__value);?>></a>', $this->renderer->compile('a(href!=$url)'));
     }
 
     public function testUncheckedAttributeCompilation()
     {
 
-        $this->assertEquals('<a<?php $__value = $url; if (!\Tale\Jade\Compiler\is_null_or_false($__value)) echo \' href=\'.\Tale\Jade\Compiler\build_value($__value, \'"\', true); unset($__value);?>></a>', $this->renderer->compile('a(href?=$url)'));
+        $this->assertEquals('<a<?php $__value = $url; if (!\Tale\Pug\Compiler\is_null_or_false($__value)) echo \' href=\'.\Tale\Pug\Compiler\build_value($__value, \'"\', true); unset($__value);?>></a>', $this->renderer->compile('a(href?=$url)'));
     }
 
     public function testUncheckedUnescapedCompilation()
     {
 
-        $this->assertEquals('<a<?php $__value = $url; if (!\Tale\Jade\Compiler\is_null_or_false($__value)) echo \' href=\'.\Tale\Jade\Compiler\build_value($__value, \'"\', false); unset($__value);?>></a>', $this->renderer->compile('a(href?!=$url)'));
+        $this->assertEquals('<a<?php $__value = $url; if (!\Tale\Pug\Compiler\is_null_or_false($__value)) echo \' href=\'.\Tale\Pug\Compiler\build_value($__value, \'"\', false); unset($__value);?>></a>', $this->renderer->compile('a(href?!=$url)'));
     }
 
     public function testUnescapedText()

@@ -1,7 +1,7 @@
 #!/usr/bin/php
 <?php
 
-use Tale\Jade\Compiler;
+use Tale\Pug\Compiler;
 
 include 'vendor/autoload.php';
 
@@ -48,13 +48,13 @@ if (is_file($path)) {
     $path = realpath($path);
 
     if (!$target)
-        $target = dirname($path).'/'.basename($path, '.jade').'.phtml';
+        $target = dirname($path).'/'.basename($path, '.pug').'.phtml';
 
     $map[$path] = $target;
 } else if (is_dir($path)) {
 
     $path = rtrim($path, '/\\');
-    $files = glob("$path/*.jade");
+    $files = glob("$path/*.pug");
 
     if (!$target) {
 
@@ -75,7 +75,7 @@ if (is_file($path)) {
 
     foreach ($files as $file) {
 
-        $map[$file] = $target.'/'.basename($file, '.jade').'.phtml';
+        $map[$file] = $target.'/'.basename($file, '.pug').'.phtml';
     }
 }
 

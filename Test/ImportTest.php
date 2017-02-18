@@ -1,14 +1,14 @@
 <?php
 
-namespace Tale\Test\Jade;
+namespace Tale\Test\Pug;
 
-use Tale\Jade\Renderer;
-use Tale\Jade\Compiler;
+use Tale\Pug\Renderer;
+use Tale\Pug\Compiler;
 
 class ImportTest extends \PHPUnit_Framework_TestCase
 {
 
-    /** @var \Tale\Jade\Compiler */
+    /** @var \Tale\Pug\Compiler */
     private $renderer;
 
     public function setUp()

@@ -1,9 +1,9 @@
 <?php
 
-namespace Tale\Test\Jade;
+namespace Tale\Test\Pug;
 
-use Tale\Jade\Compiler;
-use Tale\Jade\Renderer;
+use Tale\Pug\Compiler;
+use Tale\Pug\Renderer;
 
 class ConfigTest extends \PHPUnit_Framework_TestCase
 {
