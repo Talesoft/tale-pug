@@ -68,14 +68,14 @@ or add it to your `composer.json` by yourself
 ```json
 {
     "require": {
-        "talesoft/tale-pug": "^1.4.5"
+        "talesoft/tale-pug": "^1.5.0"
     }
 }
 ```
 
 _Note: If you're not using composer, make sure to also include the `Compiler/functions.php` file_
 
-### Rendering a Jade Template
+### Rendering a Pug Template
 
 Include the `vendor/autoload.php` file of composer in your PHP script and get started with Tale Pug!
 
