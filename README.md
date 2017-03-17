@@ -182,38 +182,38 @@ This always has been and will always be the main target.
 PHP has it's own features that are surely different from JavaScript's.
 By utilizing those features it aims to bring in more, compatible features into the language to make the fastest template development ever possible!
 
-**You can try each feature and see a bunch of examples on my [sandbox site](http://sandbox.jade.talesoft.codes)**
+**You can try each feature and see a bunch of examples on my [sandbox site](http://sandbox.pug.talesoft.codes)**
 
 ### Supported official PugJS Features
 
-- [Tags](http://sandbox.jade.talesoft.codes)
-- [Classes](http://sandbox.jade.talesoft.codes?example=classes)
-- [IDs](http://sandbox.jade.talesoft.codes?example=ids)
-- [Doctypes](http://sandbox.jade.talesoft.codes?example=html-5)
-- [Attributes](http://sandbox.jade.talesoft.codes?example=attributes)
-- [Mixins](http://sandbox.jade.talesoft.codes?example=mixins)
-- [Blocks](http://sandbox.jade.talesoft.codes?example=blocks)
-- [Expressions](http://sandbox.jade.talesoft.codes?example=expressions)
-- [Escaping](http://sandbox.jade.talesoft.codes?example=escaping)
-- [Block Expansion](http://sandbox.jade.talesoft.codes?example=block-expansion)
-- [Assignments](http://sandbox.jade.talesoft.codes?example=assignments)
-- [Comments](http://sandbox.jade.talesoft.codes?example=comments)
-- [Code](http://sandbox.jade.talesoft.codes?example=code)
-- [Inheritance](http://sandbox.jade.talesoft.codes?example=inheritance)
-- [Includes](http://sandbox.jade.talesoft.codes?example=includes)
-- [Conditionals](http://sandbox.jade.talesoft.codes?example=conditionals)
-- [Loops](http://sandbox.jade.talesoft.codes?example=loops)
-- [Interpolation](http://sandbox.jade.talesoft.codes?example=interpolation)
-- [Filters](http://sandbox.jade.talesoft.codes?example=filters)
-- [Mixin Blocks](http://sandbox.jade.talesoft.codes?example=mixin-blocks)
-- [Variadics](http://sandbox.jade.talesoft.codes?example=variadics)
+- [Tags](http://sandbox.pug.talesoft.codes)
+- [Classes](http://sandbox.pug.talesoft.codes?example=classes)
+- [IDs](http://sandbox.pug.talesoft.codes?example=ids)
+- [Doctypes](http://sandbox.pug.talesoft.codes?example=html-5)
+- [Attributes](http://sandbox.pug.talesoft.codes?example=attributes)
+- [Mixins](http://sandbox.pug.talesoft.codes?example=mixins)
+- [Blocks](http://sandbox.pug.talesoft.codes?example=blocks)
+- [Expressions](http://sandbox.pug.talesoft.codes?example=expressions)
+- [Escaping](http://sandbox.pug.talesoft.codes?example=escaping)
+- [Block Expansion](http://sandbox.pug.talesoft.codes?example=block-expansion)
+- [Assignments](http://sandbox.pug.talesoft.codes?example=assignments)
+- [Comments](http://sandbox.pug.talesoft.codes?example=comments)
+- [Code](http://sandbox.pug.talesoft.codes?example=code)
+- [Inheritance](http://sandbox.pug.talesoft.codes?example=inheritance)
+- [Includes](http://sandbox.pug.talesoft.codes?example=includes)
+- [Conditionals](http://sandbox.pug.talesoft.codes?example=conditionals)
+- [Loops](http://sandbox.pug.talesoft.codes?example=loops)
+- [Interpolation](http://sandbox.pug.talesoft.codes?example=interpolation)
+- [Filters](http://sandbox.pug.talesoft.codes?example=filters)
+- [Mixin Blocks](http://sandbox.pug.talesoft.codes?example=mixin-blocks)
+- [Variadics](http://sandbox.pug.talesoft.codes?example=variadics)
 
 ### Supported Tale Pug Features
 
-- [Named Mixin Parameters](http://sandbox.jade.talesoft.codes?example=named-mixin-parameters)
-- [Attribute Stacking](http://sandbox.jade.talesoft.codes?example=attribute-stacking)
-- [Variable Access](http://sandbox.jade.talesoft.codes?example=variable-access)
-- [Do/while and for-Loops](http://sandbox.jade.talesoft.codes?example=loops)
+- [Named Mixin Parameters](http://sandbox.pug.talesoft.codes?example=named-mixin-parameters)
+- [Attribute Stacking](http://sandbox.pug.talesoft.codes?example=attribute-stacking)
+- [Variable Access](http://sandbox.pug.talesoft.codes?example=variable-access)
+- [Do/while and for-Loops](http://sandbox.pug.talesoft.codes?example=loops)
 
 ### Other cool features
 
@@ -255,10 +255,10 @@ It doesn't stick to the Pug-convention, but it will always provide compatibility
 
 ## Documentation Resources
 
-[Tale Pug Live Compiler](http://sandbox.jade.talesoft.codes)
+[Tale Pug Sandbox](http://sandbox.pug.talesoft.codes)
 A compiler for you to play with in your browser as well as a whole bunch of examples to give you a grasp of what Tale Pug is capable of.
 
-[The Tale Pug API Docs](http://jade.talesoft.codes/docs)
+[The Tale Pug API Docs](http://pug.talesoft.codes/docs)
 The documentation of the Tale Pug source code.
 Generated with phpDocumentor, but is's fairly enlightening.
 
