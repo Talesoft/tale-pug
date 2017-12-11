@@ -1031,7 +1031,7 @@ class Compiler
         }
 
         //Add the path were currently compiling in (e.g. include, extends)
-        if (count($this->files) > 0)
+        if (isset($this->files) && count($this->files) > 0)
             $paths[] = dirname(end($this->files));
 
         //Iterate paths and check file existence via realpath
