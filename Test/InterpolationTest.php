@@ -76,18 +76,20 @@ class InterpolationTest extends TestCase
         $this->assertEquals('<p>Some text <a>A</a> <p>B</p> <?=htmlentities(isset($var) ? $var : \'\', \ENT_QUOTES, \'UTF-8\')?> <c class="d">E</c> <?=isset($otherVar) ? $otherVar : \'\'?> <f></f></p>', $this->renderer->compile("p.\n\tSome text #[a A] #[p B] #{\$var} #[c.d E] !{\$otherVar} #[f]"));
     }
 
+    /**
+     * @expectedException \Tale\Pug\Compiler\Exception
+     */
     public function testInvalidInterpolation()
     {
-
-        $this->setExpectedException(Compiler\Exception::class);
 
         $this->renderer->compile('#{p Some content');
     }
 
+    /**
+     * @expectedException \Tale\Pug\Compiler\Exception
+     */
     public function testInvalidPugInterpolation()
     {
-
-        $this->setExpectedException(Compiler\Exception::class);
 
         $this->renderer->compile('#[p Some content');
     }

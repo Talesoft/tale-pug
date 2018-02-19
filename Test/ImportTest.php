@@ -48,10 +48,11 @@ class ImportTest extends TestCase
         ));
     }
 
+    /**
+     * @expectedException \Tale\Pug\Compiler\Exception
+     */
     public function testFileNotFound()
     {
-
-        $this->setExpectedException(Compiler\Exception::class);
 
         $this->renderer->compile('include non-existent-file');
         $this->renderer->compile('extends non-existent-file');

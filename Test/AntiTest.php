@@ -17,61 +17,67 @@ class AntiTest extends TestCase
         $this->compiler = new Compiler();
     }
 
+    /**
+     * @expectedException \Tale\Pug\Compiler\Exception
+     */
     public function testWhenNotCaseChild()
     {
-        $this->setExpectedException(Compiler\Exception::class);
-
         $this->compiler->compile('when "abc"');
     }
 
+    /**
+     * @expectedException \Tale\Pug\Compiler\Exception
+     */
     public function testUnclosedAttributeBlockOnElement()
     {
-        $this->setExpectedException(Compiler\Exception::class);
-
         $this->compiler->compile('some-element(abc, def');
     }
 
+    /**
+     * @expectedException \Tale\Pug\Compiler\Exception
+     */
     public function testUnclosedAttributeBlockOnMixin()
     {
-        $this->setExpectedException(Compiler\Exception::class);
-
         $this->compiler->compile('mixin some-mixin(abc, def');
     }
 
+    /**
+     * @expectedException \Tale\Pug\Compiler\Exception
+     */
     public function testUnclosedAttributeBlockOnMixinCall()
     {
-        $this->setExpectedException(Compiler\Exception::class);
-
         $this->compiler->compile('+some-mixin(abc, def');
     }
 
+    /**
+     * @expectedException \Tale\Pug\Compiler\Exception
+     */
     public function testNestedMixin()
     {
-
-        $this->setExpectedException(Compiler\Exception::class);
-
         $this->compiler->compile("mixin some-mixin()\n\tmixin some-sub-mixin()");
     }
 
+    /**
+     * @expectedException \Tale\Pug\Compiler\Exception
+     */
     public function testDoWithoutWhile()
     {
-        $this->setExpectedException(Compiler\Exception::class);
-
         $this->compiler->compile("do\n\tp Something\nnot-a-while-element");
     }
 
+    /**
+     * @expectedException \Tale\Pug\Compiler\Exception
+     */
     public function testStandaloneWhile()
     {
-        $this->setExpectedException(Compiler\Exception::class);
-
         $this->compiler->compile("while \$something");
     }
 
+    /**
+     * @expectedException \Tale\Pug\Compiler\Exception
+     */
     public function testDoWhileWithWhileChildren()
     {
-
-        $this->setExpectedException(Compiler\Exception::class);
-
         $this->compiler->compile("do\n\tp Something\nwhile \$something\n\tp Anything");
     }
 }

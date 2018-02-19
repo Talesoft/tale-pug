@@ -3,7 +3,6 @@
 namespace Tale\Test\Pug;
 
 use PHPUnit\Framework\TestCase;
-use Tale\Pug\Compiler\Exception;
 use Tale\Pug\Renderer;
 
 class MixinTest extends TestCase
@@ -85,10 +84,12 @@ class MixinTest extends TestCase
         $this->assertEquals('<h1>Parent Mixin</h1><div class="parent-block"><h2>Child Mixin</h2><div class="child-block"><span>This is test content</span><span>This content is fed from outside</span></div></div>', $this->renderer->render('scoping', ['fedFromOutside' => 'This content is fed from outside']));
     }
 
+    /**
+     * @expectedException \Tale\Pug\Compiler\Exception
+     */
     public function testDuplicateWithoutOverwrite()
     {
 
-        $this->setExpectedException(Exception::class);
         $this->renderer->render('duplicate');
     }
 
@@ -109,13 +110,11 @@ class MixinTest extends TestCase
     public function testCircular()
     {
 
-
         $this->assertEquals('<b>a</b>', $this->renderer->render('circular'));
     }
 
     public function testCallNameInterpolation()
     {
-
 
         $this->assertEquals('<b-element>Some Content</b-element><c-element>Some other content</c-element>', $this->renderer->render('interpolation'));
     }
