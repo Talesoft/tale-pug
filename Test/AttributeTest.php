@@ -133,14 +133,22 @@ class AttributeTest extends TestCase
         ];
     }
 
+    /**
+     * @expectedException \Tale\Pug\Compiler\Exception
+     */
     public function testUnnamedAttributed()
     {
 
-        $this->setExpectedException(Compiler\Exception::class);
-        $this->assertEquals('', $this->renderer->compile('a(="some value")'));
-
-        $this->setExpectedException(Compiler\Exception::class);
         $this->assertEquals('', $this->renderer->compile('a("some value")'));
+    }
+
+    /**
+     * @expectedException \Tale\Pug\Compiler\Exception
+     */
+    public function testUnnamedAttributedWithEqual()
+    {
+
+        $this->assertEquals('', $this->renderer->compile('a(="some value")'));
     }
 
     public function testTernaryExpressionValue()
