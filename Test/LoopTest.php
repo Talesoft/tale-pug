@@ -2,10 +2,10 @@
 
 namespace Tale\Test\Pug;
 
-use Tale\Pug\Compiler;
+use PHPUnit\Framework\TestCase;
 use Tale\Pug\Renderer;
 
-class LoopTest extends \PHPUnit_Framework_TestCase
+class LoopTest extends TestCase
 {
 
     /** @var \Tale\Pug\Renderer */

@@ -2,10 +2,11 @@
 
 namespace Tale\Test\Pug;
 
+use PHPUnit\Framework\TestCase;
 use Tale\Pug\Compiler\Exception;
 use Tale\Pug\Renderer;
 
-class MixinTest extends \PHPUnit_Framework_TestCase
+class MixinTest extends TestCase
 {
 
     /** @var \Tale\Pug\Renderer */

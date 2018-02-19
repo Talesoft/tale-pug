@@ -2,9 +2,10 @@
 
 namespace Tale\Test\Pug;
 
+use PHPUnit\Framework\TestCase;
 use Tale\Pug\Renderer;
 
-class BlockTest extends \PHPUnit_Framework_TestCase
+class BlockTest extends TestCase
 {
 
     /** @var \Tale\Pug\Compiler */

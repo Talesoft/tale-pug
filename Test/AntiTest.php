@@ -2,11 +2,10 @@
 
 namespace Tale\Test\Pug;
 
+use PHPUnit\Framework\TestCase;
 use Tale\Pug\Compiler;
-use Tale\Pug\Lexer;
-use Tale\Pug\Parser;
 
-class AntiTest extends \PHPUnit_Framework_TestCase
+class AntiTest extends TestCase
 {
 
     /** @var \Tale\Pug\Compiler */

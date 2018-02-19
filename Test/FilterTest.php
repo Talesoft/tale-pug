@@ -2,9 +2,10 @@
 
 namespace Tale\Test\Pug;
 
+use PHPUnit\Framework\TestCase;
 use Tale\Pug\Compiler;
 
-class FilterTest extends \PHPUnit_Framework_TestCase
+class FilterTest extends TestCase
 {
 
     /** @var \Tale\Pug\Compiler */

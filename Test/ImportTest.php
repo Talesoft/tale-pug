@@ -2,10 +2,11 @@
 
 namespace Tale\Test\Pug;
 
+use PHPUnit\Framework\TestCase;
 use Tale\Pug\Renderer;
 use Tale\Pug\Compiler;
 
-class ImportTest extends \PHPUnit_Framework_TestCase
+class ImportTest extends TestCase
 {
 
     /** @var \Tale\Pug\Compiler */

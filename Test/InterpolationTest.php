@@ -2,10 +2,11 @@
 
 namespace Tale\Test\Pug;
 
+use PHPUnit\Framework\TestCase;
 use Tale\Pug\Compiler;
 use Tale\Pug\Renderer;
 
-class InterpolationTest extends \PHPUnit_Framework_TestCase
+class InterpolationTest extends TestCase
 {
 
     /** @var \Tale\Pug\Renderer */

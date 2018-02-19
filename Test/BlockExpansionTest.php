@@ -2,10 +2,10 @@
 
 namespace Tale\Test\Pug;
 
+use PHPUnit\Framework\TestCase;
 use Tale\Pug\Compiler;
-use Tale\Pug\Lexer;
 
-class BlockExpansionTest extends \PHPUnit_Framework_TestCase
+class BlockExpansionTest extends TestCase
 {
 
     /** @var \Tale\Pug\Compiler */

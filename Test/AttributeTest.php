@@ -2,11 +2,11 @@
 
 namespace Tale\Test\Pug;
 
+use PHPUnit\Framework\TestCase;
 use Tale\Pug\Compiler;
 use Tale\Pug\Renderer;
-use Tale\Pug\Parser;
 
-class AttributeTest extends \PHPUnit_Framework_TestCase
+class AttributeTest extends TestCase
 {
 
     /** @var \Tale\Pug\Renderer */

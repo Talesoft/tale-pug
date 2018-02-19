@@ -2,9 +2,10 @@
 
 namespace Tale\Test\Pug;
 
+use PHPUnit\Framework\TestCase;
 use Tale\Pug\Compiler;
 
-class IdTest extends \PHPUnit_Framework_TestCase
+class IdTest extends TestCase
 {
 
     /** @var \Tale\Pug\Compiler */

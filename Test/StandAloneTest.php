@@ -2,10 +2,10 @@
 
 namespace Tale\Test\Pug;
 
-use Tale\Pug\Compiler;
+use PHPUnit\Framework\TestCase;
 use Tale\Pug\Renderer;
 
-class StandAloneTest extends \PHPUnit_Framework_TestCase
+class StandAloneTest extends TestCase
 {
 
     /** @var \Tale\Pug\Renderer */

@@ -2,11 +2,12 @@
 
 namespace Tale\Test\Pug;
 
+use PHPUnit\Framework\TestCase;
 use Tale\Pug\Compiler;
 use Tale\Pug\Renderer;
 use Tale\Pug\Parser;
 
-class DoctypeTest extends \PHPUnit_Framework_TestCase
+class DoctypeTest extends TestCase
 {
 
     /** @var \Tale\Pug\Renderer */
